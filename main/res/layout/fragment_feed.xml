@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+
+
+
+   <ProgressBar
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/progressBarid"
+       android:layout_gravity="center"
+
+       >
+   </ProgressBar>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorText"
+        android:layout_gravity="center"
+        android:text="Error! Try Again"
+        android:textSize="22sp"
+        >
+
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        />
+</LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

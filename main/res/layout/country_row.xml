@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#E1D5D5">
+
+    <data>
+        <variable
+            name="country"
+            type="com.denizsimsek.kotlincountries.util.Country" />
+        <variable
+            name="listener"
+            type="com.denizsimsek.kotlincountries.CountryClickListener" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:onClick="@{listener.countryClicked}"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:visibility="gone"
+            android:id="@+id/countryUuid"
+            android:text="@{String.valueOf(country.uuid)}"
+            >
+
+        </TextView>
+        <ImageView
+            android:id="@+id/flagImage"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="2"
+            android:downloadImage="@{country.countryImage}"
+            android:src="@color/cardview_dark_background"
+            >
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/countryName"
+                android:text="@{country.countryName}"
+                android:textSize="24sp"
+                android:paddingBottom="10dp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/countryLanguage"
+                android:text="@{country.countyrLanguage}"
+                android:textSize="22sp"
+
+                ></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>
